@@ -1,0 +1,50 @@
+:root{
+    --gray1 : #333333;
+    --gray2 : #4f4f4f;
+    --gray3 : #828282;
+    --gray6 : #f2f2f2;
+    --blue : #2962FF;
+    --red : #D32F2F;
+}
+
+*{box-sizing: border-box;}
+html, body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    padding: 2vh 10vw;
+}
+.input-container{
+    display: inline-flex; 
+    flex-direction: column;
+}
+.input-label{
+    font-size: 12px;
+    color: var(--gray1);
+    font-weight: 400;
+}
+.input-tag{
+    color: var(--gray3);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.53rem;
+    border-radius: 6px;
+    border: 1px solid var(--gray3);
+    margin: 5px 0;
+}
+.input-helper-text{
+    font-size: 10px;
+    color: var(--gray3);
+}
+/*Hover*/
+.input-tag:hover{
+    border: 1px solid var(--gray1);
+}
+/*focus normal*/
+.input-tag:focus{
+    outline: none;
+    border: 1px solid var(--blue);
+}
