@@ -41,7 +41,7 @@ body{
 }
 /*Hover*/
 .input-tag:hover:not(:disabled){
-    border: 1px solid var(--gray1);
+    border: 1px solid var(--gray1) !important;
 }
 /*focus normal*/
 .input-tag:focus:not(:disabled){
