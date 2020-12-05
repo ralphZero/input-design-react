@@ -1,11 +1,21 @@
 import Input from './Input.js'
 
 class App extends React.Component {
+    state = {
+        error : false,
+        disabled : false,
+        helperText : ''
+    }
+
     render() {
         return (
             <div>
                 <h1>Input</h1>
-                <Input />
+                <Input 
+                    error={this.state.error} 
+                    disabled={this.state.disabled} 
+                    helperText={this.state.helperText} 
+                />
             </div>
         )
     }

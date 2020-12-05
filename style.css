@@ -40,11 +40,29 @@ body{
     color: var(--gray3);
 }
 /*Hover*/
-.input-tag:hover{
+.input-tag:hover:not(:disabled){
     border: 1px solid var(--gray1);
 }
 /*focus normal*/
-.input-tag:focus{
+.input-tag:focus:not(:disabled){
     outline: none;
     border: 1px solid var(--blue);
+}
+.focused-normal{
+    color: var(--blue);
+}
+/*error*/
+.input-container[data-error="true"] .input-tag{
+    border: 1px solid var(--red);
+}
+.input-container[data-error="true"] .input-label{
+    color: var(--red) !important;
+}
+.input-container[data-error="true"] .input-helper-text{
+    color: var(--red) !important;
+}
+/*disable*/
+.input-tag:disabled{
+    border: 1px solid #e0e0e0;
+    background-color: var(--gray6);
 }
