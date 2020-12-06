@@ -25,7 +25,16 @@ var App = function (_React$Component) {
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             error: false,
             disabled: false,
-            helperText: ''
+            helperText: '',
+            iconStart: true,
+            icon: '',
+            value: '',
+            size: 'normal'
+        }, _this.handleInputChange = function (value) {
+            console.log(value);
+            _this.setState({
+                value: value
+            });
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -43,7 +52,12 @@ var App = function (_React$Component) {
                 React.createElement(Input, {
                     error: this.state.error,
                     disabled: this.state.disabled,
-                    helperText: this.state.helperText
+                    helperText: this.state.helperText,
+                    icon: this.state.icon,
+                    iconStart: this.state.iconStart,
+                    value: this.state.value,
+                    onChange: this.handleInputChange,
+                    size: this.state.size
                 })
             );
         }

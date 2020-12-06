@@ -26,6 +26,19 @@ body{
     color: var(--gray1);
     font-weight: 400;
 }
+.input-group{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-icon{
+    position: absolute;
+    padding: 0.43rem;
+    color: var(--gray3);
+}
+.input-icon-right{
+    right: 0;
+}
 .input-tag{
     color: var(--gray3);
     font-size: 14px;
@@ -39,6 +52,10 @@ body{
     font-size: 10px;
     color: var(--gray3);
 }
+.pl-2{padding-left: 2.2rem;}
+.pr-2{padding-right: 2.2rem;}
+.sm{padding: 0.35rem;}
+.lg{padding: 0.73rem;}
 /*Hover*/
 .input-tag:hover:not(:disabled){
     border: 1px solid var(--gray1) !important;

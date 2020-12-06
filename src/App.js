@@ -4,7 +4,18 @@ class App extends React.Component {
     state = {
         error : false,
         disabled : false,
-        helperText : ''
+        helperText : '',
+        iconStart : true,
+        icon : '',
+        value : '',
+        size : 'normal'
+    }
+
+    handleInputChange = (value) => {
+        console.log(value);
+        this.setState({
+            value : value
+        })
     }
 
     render() {
@@ -15,6 +26,11 @@ class App extends React.Component {
                     error={this.state.error} 
                     disabled={this.state.disabled} 
                     helperText={this.state.helperText} 
+                    icon={this.state.icon}
+                    iconStart={this.state.iconStart}
+                    value={this.state.value}
+                    onChange={this.handleInputChange}
+                    size={this.state.size}
                 />
             </div>
         )
