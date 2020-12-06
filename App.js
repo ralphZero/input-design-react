@@ -29,7 +29,8 @@ var App = function (_React$Component) {
             iconStart: true,
             icon: '',
             value: '',
-            size: 'normal'
+            size: 'normal',
+            fullWidth: false
         }, _this.handleInputChange = function (value) {
             console.log(value);
             _this.setState({
@@ -57,7 +58,8 @@ var App = function (_React$Component) {
                     iconStart: this.state.iconStart,
                     value: this.state.value,
                     onChange: this.handleInputChange,
-                    size: this.state.size
+                    size: this.state.size,
+                    fullWidth: this.state.fullWidth
                 })
             );
         }

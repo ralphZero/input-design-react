@@ -8,7 +8,8 @@ class App extends React.Component {
         iconStart : true,
         icon : '',
         value : '',
-        size : 'normal'
+        size : 'normal',
+        fullWidth : false,
     }
 
     handleInputChange = (value) => {
@@ -31,6 +32,7 @@ class App extends React.Component {
                     value={this.state.value}
                     onChange={this.handleInputChange}
                     size={this.state.size}
+                    fullWidth={this.state.fullWidth}
                 />
             </div>
         )

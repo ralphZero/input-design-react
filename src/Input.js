@@ -1,6 +1,6 @@
 const Input = (props) => {
 
-    const { error, helperText, disabled, icon, iconStart, value, onChange, size } = props;
+    const { error, helperText, disabled, icon, iconStart, value, onChange, size, fullWidth } = props;
 
     function handleFocus(e){
         let label, helper, parent;
@@ -46,6 +46,12 @@ const Input = (props) => {
 
     let handleError = disabled ? (false) : (error)
     let handleHelper = !disabled ? (helperText) : ('')
+    
+    const handleWidth = fullWidth ? (
+        'flex'
+    ) : (
+        'inline-flex'
+    )
 
     const handleSize = size !== 'normal' ? (
         size === 'sm' ? ( 'sm' ) : ( 'lg' )
@@ -66,11 +72,11 @@ const Input = (props) => {
             </div>
         )
     ) : (
-        <input className={'input-tag' + handleSize} disabled={disabled} name='input' type='text' placeholder='Placeholder' value={value} onChange={(e)=>{onChange(e.currentTarget.value)}} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)}/>
+        <input className={'input-tag ' + handleSize} disabled={disabled} name='input' type='text' placeholder='Placeholder' value={value} onChange={(e)=>{onChange(e.currentTarget.value)}} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)}/>
     )
 
     return (
-        <div className='input-container' data-error={handleError}>
+        <div className={'input-container '+ handleWidth} data-error={handleError}>
             <label className='input-label' htmlFor='input'>Label</label>
             { handleIcon }
             <small className='input-helper-text'>{handleHelper}</small>

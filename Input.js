@@ -6,7 +6,8 @@ var Input = function Input(props) {
         iconStart = props.iconStart,
         value = props.value,
         _onChange = props.onChange,
-        size = props.size;
+        size = props.size,
+        fullWidth = props.fullWidth;
 
 
     function handleFocus(e) {
@@ -58,6 +59,8 @@ var Input = function Input(props) {
     var handleError = disabled ? false : error;
     var handleHelper = !disabled ? helperText : '';
 
+    var handleWidth = fullWidth ? 'flex' : 'inline-flex';
+
     var handleSize = size !== 'normal' ? size === 'sm' ? 'sm' : 'lg' : '';
 
     var handleIcon = icon ? iconStart ? React.createElement(
@@ -90,7 +93,7 @@ var Input = function Input(props) {
             { className: 'input-icon input-icon-right material-icons m-18' },
             icon
         )
-    ) : React.createElement('input', { className: 'input-tag' + handleSize, disabled: disabled, name: 'input', type: 'text', placeholder: 'Placeholder', value: value, onChange: function onChange(e) {
+    ) : React.createElement('input', { className: 'input-tag ' + handleSize, disabled: disabled, name: 'input', type: 'text', placeholder: 'Placeholder', value: value, onChange: function onChange(e) {
             _onChange(e.currentTarget.value);
         }, onFocus: function onFocus(e) {
             return handleFocus(e);
@@ -100,7 +103,7 @@ var Input = function Input(props) {
 
     return React.createElement(
         'div',
-        { className: 'input-container', 'data-error': handleError },
+        { className: 'input-container ' + handleWidth, 'data-error': handleError },
         React.createElement(
             'label',
             { className: 'input-label', htmlFor: 'input' },
