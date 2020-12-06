@@ -10,6 +10,8 @@ class App extends React.Component {
         value : '',
         size : 'normal',
         fullWidth : false,
+        multiline : false,
+        row : '4'
     }
 
     handleInputChange = (value) => {
@@ -33,6 +35,8 @@ class App extends React.Component {
                     onChange={this.handleInputChange}
                     size={this.state.size}
                     fullWidth={this.state.fullWidth}
+                    multiline={this.state.multiline}
+                    row={this.state.row}
                 />
             </div>
         )

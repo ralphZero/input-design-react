@@ -30,7 +30,9 @@ var App = function (_React$Component) {
             icon: '',
             value: '',
             size: 'normal',
-            fullWidth: false
+            fullWidth: false,
+            multiline: false,
+            row: '4'
         }, _this.handleInputChange = function (value) {
             console.log(value);
             _this.setState({
@@ -59,7 +61,9 @@ var App = function (_React$Component) {
                     value: this.state.value,
                     onChange: this.handleInputChange,
                     size: this.state.size,
-                    fullWidth: this.state.fullWidth
+                    fullWidth: this.state.fullWidth,
+                    multiline: this.state.multiline,
+                    row: this.state.row
                 })
             );
         }
