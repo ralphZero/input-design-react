@@ -21,6 +21,18 @@ class App extends React.Component {
         })
     }
 
+    handleText = (e) => {
+        this.setState({
+            helperText : e.currentTarget.value
+        })
+    }
+
+    handleDisabled = (e) => {
+        this.setState({
+            disabled : e.currentTarget.value
+        })
+    }
+
     render() {
         return (
             <div>
@@ -38,6 +50,19 @@ class App extends React.Component {
                     multiline={this.state.multiline}
                     row={this.state.row}
                 />
+                <div className="grid">
+                    <div className="control">
+                        <label htmlFor="helpertext" className="control-label">Helper Text</label>
+                        <input className='control-select' placeholder='Ex: An error occured' type='text' name='helpertext' onKeyUp={this.handleText} />
+                    </div>
+                    <div className='control'>
+                        <label className='control-label' htmlFor='disabled'>Disabled</label>
+                        <select className='control-select' name='disabled' onChange={this.handleDisabled}>
+                            <option value='true'>True</option>
+                            <option value='false'>False</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         )
     }
