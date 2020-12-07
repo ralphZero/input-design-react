@@ -9,7 +9,8 @@ var Input = function Input(props) {
         size = props.size,
         fullWidth = props.fullWidth,
         multiline = props.multiline,
-        row = props.row;
+        row = props.row,
+        placeholder = props.placeholder;
 
 
     function handleFocus(e) {
@@ -80,7 +81,7 @@ var Input = function Input(props) {
             { className: 'input-icon material-icons m-18' },
             icon
         ),
-        React.createElement('textarea', { className: 'input-tag ' + handleSize + ' pl-2', disabled: disabled, name: 'input', rows: row, placeholder: 'Placeholder', onInput: handleChange, value: value, onFocus: function onFocus(e) {
+        React.createElement('textarea', { className: 'input-tag ' + handleSize + ' pl-2', disabled: disabled, name: 'input', rows: row, placeholder: placeholder, onInput: handleChange, value: value, onFocus: function onFocus(e) {
                 return handleFocus(e);
             }, onBlur: function onBlur(e) {
                 return handleBlur(e);
@@ -88,7 +89,7 @@ var Input = function Input(props) {
     ) : React.createElement(
         'div',
         { className: 'input-group' },
-        React.createElement('textarea', { className: 'input-tag ' + handleSize + ' pr-2', disabled: disabled, name: 'input', rows: row, placeholder: 'Placeholder', onInput: handleChange, value: value, onFocus: function onFocus(e) {
+        React.createElement('textarea', { className: 'input-tag ' + handleSize + ' pr-2', disabled: disabled, name: 'input', rows: row, placeholder: placeholder, onInput: handleChange, value: value, onFocus: function onFocus(e) {
                 return handleFocus(e);
             }, onBlur: function onBlur(e) {
                 return handleBlur(e);
@@ -98,7 +99,7 @@ var Input = function Input(props) {
             { className: 'input-icon input-icon-right material-icons m-18' },
             icon
         )
-    ) : React.createElement('textarea', { className: 'input-tag ' + handleSize, disabled: disabled, name: 'input', rows: row, placeholder: 'Placeholder', onInput: handleChange, value: value, onFocus: function onFocus(e) {
+    ) : React.createElement('textarea', { className: 'input-tag ' + handleSize, disabled: disabled, name: 'input', rows: row, placeholder: placeholder, onInput: handleChange, value: value, onFocus: function onFocus(e) {
             return handleFocus(e);
         }, onBlur: function onBlur(e) {
             return handleBlur(e);
@@ -112,7 +113,7 @@ var Input = function Input(props) {
             { className: 'input-icon material-icons m-18' },
             icon
         ),
-        React.createElement('input', { className: 'input-tag ' + handleSize + ' pl-2', disabled: disabled, name: 'input', type: 'text', placeholder: 'Placeholder', value: value, onChange: handleChange, onFocus: function onFocus(e) {
+        React.createElement('input', { className: 'input-tag ' + handleSize + ' pl-2', disabled: disabled, name: 'input', type: 'text', placeholder: placeholder, value: value, onChange: handleChange, onFocus: function onFocus(e) {
                 return handleFocus(e);
             }, onBlur: function onBlur(e) {
                 return handleBlur(e);
@@ -120,7 +121,7 @@ var Input = function Input(props) {
     ) : React.createElement(
         'div',
         { className: 'input-group' },
-        React.createElement('input', { className: 'input-tag ' + handleSize + ' pr-2', disabled: disabled, name: 'input', type: 'text', placeholder: 'Placeholder', value: value, onChange: handleChange, onFocus: function onFocus(e) {
+        React.createElement('input', { className: 'input-tag ' + handleSize + ' pr-2', disabled: disabled, name: 'input', type: 'text', placeholder: placeholder, value: value, onChange: handleChange, onFocus: function onFocus(e) {
                 return handleFocus(e);
             }, onBlur: function onBlur(e) {
                 return handleBlur(e);
@@ -130,7 +131,7 @@ var Input = function Input(props) {
             { className: 'input-icon input-icon-right material-icons m-18' },
             icon
         )
-    ) : React.createElement('input', { className: 'input-tag ' + handleSize, disabled: disabled, name: 'input', type: 'text', placeholder: 'Placeholder', value: value, onChange: handleChange, onFocus: function onFocus(e) {
+    ) : React.createElement('input', { className: 'input-tag ' + handleSize, disabled: disabled, name: 'input', type: 'text', placeholder: placeholder, value: value, onChange: handleChange, onFocus: function onFocus(e) {
             return handleFocus(e);
         }, onBlur: function onBlur(e) {
             return handleBlur(e);

@@ -6,7 +6,7 @@
     --blue : #2962FF;
     --red : #D32F2F;
 }
-
+.color-grey{color: var(--gray2);}
 *{box-sizing: border-box;}
 html, body{
     margin: 0;
@@ -91,6 +91,7 @@ body{
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: center;
+    margin-top: 3rem;
 }
 @media screen and (max-width: 675px){
     .grid{

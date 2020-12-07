@@ -1,6 +1,6 @@
 const Input = (props) => {
 
-    const { error, helperText, disabled, icon, iconStart, value, onChange, size, fullWidth, multiline, row } = props;
+    const { error, helperText, disabled, icon, iconStart, value, onChange, size, fullWidth, multiline, row, placeholder } = props;
 
     function handleFocus(e) {
         let label, helper, parent;
@@ -70,16 +70,16 @@ const Input = (props) => {
             iconStart ? (
                 <div className="input-group">
                     <span className='input-icon material-icons m-18'>{icon}</span>
-                    <textarea className={'input-tag ' + handleSize + ' pl-2'} disabled={disabled} name='input' rows={row} placeholder='Placeholder' onInput={handleChange} value={value} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)}></textarea>
+                    <textarea className={'input-tag ' + handleSize + ' pl-2'} disabled={disabled} name='input' rows={row} placeholder={placeholder} onInput={handleChange} value={value} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)}></textarea>
                 </div>
             ) : (
                     <div className="input-group">
-                        <textarea className={'input-tag ' + handleSize + ' pr-2'} disabled={disabled} name='input' rows={row} placeholder='Placeholder' onInput={handleChange} value={value} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)}></textarea>
+                        <textarea className={'input-tag ' + handleSize + ' pr-2'} disabled={disabled} name='input' rows={row} placeholder={placeholder} onInput={handleChange} value={value} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)}></textarea>
                         <span className='input-icon input-icon-right material-icons m-18'>{icon}</span>
                     </div>
                 )
         ) : (
-                <textarea className={'input-tag ' + handleSize} disabled={disabled} name='input' rows={row} placeholder='Placeholder' onInput={handleChange} value={value} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)}></textarea>
+                <textarea className={'input-tag ' + handleSize} disabled={disabled} name='input' rows={row} placeholder={placeholder} onInput={handleChange} value={value} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)}></textarea>
         )
     ) : (
         // multiline = false
@@ -87,16 +87,16 @@ const Input = (props) => {
             iconStart ? (
                 <div className="input-group">
                     <span className='input-icon material-icons m-18'>{icon}</span>
-                    <input className={'input-tag ' + handleSize + ' pl-2'} disabled={disabled} name='input' type='text' placeholder='Placeholder' value={value} onChange={handleChange} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)} />
+                    <input className={'input-tag ' + handleSize + ' pl-2'} disabled={disabled} name='input' type='text' placeholder={placeholder} value={value} onChange={handleChange} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)} />
                 </div>
             ) : (
                     <div className="input-group">
-                        <input className={'input-tag ' + handleSize + ' pr-2'} disabled={disabled} name='input' type='text' placeholder='Placeholder' value={value} onChange={handleChange} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)} />
+                        <input className={'input-tag ' + handleSize + ' pr-2'} disabled={disabled} name='input' type='text' placeholder={placeholder} value={value} onChange={handleChange} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)} />
                         <span className='input-icon input-icon-right material-icons m-18'>{icon}</span>
                     </div>
                 )
         ) : (
-                <input className={'input-tag ' + handleSize} disabled={disabled} name='input' type='text' placeholder='Placeholder' value={value} onChange={handleChange} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)} />
+                <input className={'input-tag ' + handleSize} disabled={disabled} name='input' type='text' placeholder={placeholder} value={value} onChange={handleChange} onFocus={(e) => handleFocus(e)} onBlur={(e) => handleBlur(e)} />
         )
     )
 
